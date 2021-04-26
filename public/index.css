@@ -113,6 +113,6 @@
   font-style: italic;
 }
 
-* {
+html, body, * {
   font-family: Poppins;
 }
