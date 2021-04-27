@@ -11,16 +11,21 @@ const App = () => {
   const [solarized, setSolarized] = useState(false);
   const about = useRef<HTMLDivElement>();
   const home = useRef<HTMLDivElement>();
+  const more = useRef<HTMLDivElement>();
 
   const scrollIntoHome = () => {
     home.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  const scrollIntoMore = () => {
+    more.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   const scrollIntoAbout = () => {
     about.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  return (<Context.Provider value={{ setSolarized, setDark, solarized, dark, about, home, scrollIntoAbout, scrollIntoHome }}>
+  return (<Context.Provider value={{ setSolarized, setDark, solarized, dark, about, home, more, scrollIntoAbout, scrollIntoHome, scrollIntoMore }}>
     <div className={[dark ? "dark" : "light", solarized ? "solar" : "", "app"].join(" ")}>
       <Navbar />
       <Title />

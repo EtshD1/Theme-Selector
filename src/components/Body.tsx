@@ -5,12 +5,13 @@ import Styles from './styles/body.module.css';
 interface providedContext {
   context: {
     about: React.RefObject<HTMLDivElement>,
-    home: React.RefObject<HTMLDivElement>
+    home: React.RefObject<HTMLDivElement>,
+    more: React.RefObject<HTMLDivElement>,
   }
 }
 
 const Body = ({ context }: providedContext) => {
-  const { home, about } = context;
+  const { home, about, more } = context;
 
   return (<div className={Styles.main}>
     <div ref={home}>
@@ -27,6 +28,13 @@ const Body = ({ context }: providedContext) => {
       <ul className={Styles.links}>
         <li><a target="_blank" rel="noreferrer" href="https://youtu.be/ydkQlJhodio">How to use TypeScript with React... But should you?</a></li>
         <li><a target="_blank" rel="noreferrer" href="https://youtu.be/rXuHGLzSmSE">CSS Theme Switcher by Reverse-Engineering Alligator.io</a></li>
+      </ul>
+    </div>
+    <div ref={more}>
+      <h3>More</h3>
+      <h4>Checkout my Github page for more projects like this</h4>
+      <ul className={Styles.links}>
+        <li><a target="_blank" rel="noreferrer" href="https://github.com/EtshD1">EtshD1</a></li>
       </ul>
     </div>
   </div>);
