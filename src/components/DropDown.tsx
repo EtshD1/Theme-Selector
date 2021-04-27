@@ -9,20 +9,24 @@ const DropDown = ({ context }: ContextProviding) => {
   const handleLight = () => {
     if (dark) {
       setDark(false);
+      localStorage.setItem("dark", "");
     }
   }
 
   const handleSolar = () => {
     if (solarized) {
       setSolarized(false);
+      localStorage.setItem("solarized", "");
     } else {
       setSolarized(true);
+      localStorage.setItem("solarized", "true");
     }
   }
 
   const handleDark = () => {
     if (!dark) {
       setDark(true);
+      localStorage.setItem("dark", "true");
     }
   }
 
@@ -33,12 +37,11 @@ const DropDown = ({ context }: ContextProviding) => {
       </button>
     </div>
     <ul className={Styles.dropdown}>
-      <li>
+      {dark ? <li>
         <button className={Styles.lightBtn} onClick={handleLight}>Light</button>
-      </li>
-      <li>
+      </li> : <li>
         <button className={Styles.darkBtn} onClick={handleDark}>Dark</button>
-      </li>
+      </li>}
       <li>
         <button className={solarized ? Styles.normalBtn : Styles.solarBtn} onClick={handleSolar}>{!solarized ? 'Solarized' : 'Normalize'}</button>
       </li>

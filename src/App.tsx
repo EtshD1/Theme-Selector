@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Navbar from './components/Navbar';
 import Title from './components/Title';
 import Body from './components/Body';
@@ -9,6 +9,19 @@ import Context from './context';
 const App = () => {
   const [dark, setDark] = useState(false);
   const [solarized, setSolarized] = useState(false);
+
+  useEffect(() => {
+    const isSolarized: string | null = localStorage.getItem("solarized");
+    const isDark: string | null = localStorage.getItem("dark");
+
+    if (isDark) {
+      setDark(true);
+    }
+    if (isSolarized) {
+      setDark(true);
+    }
+  }, []);
+
   const about = useRef<HTMLDivElement>();
   const home = useRef<HTMLDivElement>();
   const more = useRef<HTMLDivElement>();
