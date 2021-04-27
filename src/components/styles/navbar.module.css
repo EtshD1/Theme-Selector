@@ -4,7 +4,7 @@
   align-items: center;
   height: 5rem;
   background-color: #000;
-  color: #fff;
+  color: var(--text);
 }
 
 .navbar > li {
@@ -42,6 +42,10 @@
   top: 0;
 }
 
+.navbar > li:hover div button div {
+  top: -10%;
+}
+
 .navbar > li .dropdown {
   position: absolute;
   top: 3rem;
@@ -51,10 +55,10 @@
   justify-content: space-around;
   
   width: 450px;
-  border-top: 2px solid #fff;
+  border-top: 2px solid var(--border-color);
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  background: blue;
+  background: var(--bg-dropdown);
   opacity: 0;
   
   padding: 0.25rem 0.5rem;
@@ -73,7 +77,7 @@
   align-items: center;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--text);
   cursor: pointer;
 }
 
@@ -82,7 +86,7 @@
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  border: 1px solid springgreen;
+  border: 1px solid var(--border-color);
   border-radius: 100%;
   margin-right: 1rem;
 }
