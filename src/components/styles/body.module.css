@@ -6,7 +6,7 @@
 }
 
 .main > div {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .main h3 {
@@ -24,6 +24,26 @@
 
 .main p {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   margin-top: 0.5rem;
+}
+
+.links > li {
+  display: flex;
+  align-items: center;
+}
+
+.links > li a {
+  color: var(--text);
+  line-height: 1.5rem;
+}
+
+.links > li::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  margin-right: 0.25rem;
+  background-color: var(--border-color);
 }
