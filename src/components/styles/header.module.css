@@ -1,0 +1,26 @@
+#headerSection {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 50% 100%, 0% 45%);
+  background: var(--bg-nav);
+  color: var(--text);
+  transition: color 1s ease-in;
+  padding-top: 5rem;
+}
+
+#headerSection > div {
+  width: 35rem;
+}
+
+#headerSection > div > h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+#headerSection > div > p {
+  margin-top: 1rem;
+  text-align: center;
+}
