@@ -47,3 +47,9 @@
   margin-right: 0.25rem;
   background-color: var(--border-color);
 }
+
+.links > li a.myProfile {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold;
+}

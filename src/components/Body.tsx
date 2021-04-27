@@ -34,7 +34,7 @@ const Body = ({ context }: providedContext) => {
       <h3>More</h3>
       <h4>Checkout my Github page for more projects like this</h4>
       <ul className={Styles.links}>
-        <li><a target="_blank" rel="noreferrer" href="https://github.com/EtshD1">EtshD1</a></li>
+        <li><a target="_blank" rel="noreferrer" href="https://github.com/EtshD1" className={Styles.myProfile}>EtshD1</a></li>
       </ul>
     </div>
   </div>);
