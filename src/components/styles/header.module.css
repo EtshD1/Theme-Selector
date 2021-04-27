@@ -7,6 +7,7 @@
   background: var(--bg-nav);
   color: var(--text);
   transition: color 1s ease-in;
+  padding-top: 5rem;
 }
 
 #headerSection > div {
